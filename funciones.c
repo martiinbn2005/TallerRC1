@@ -103,7 +103,7 @@ void verificarFactibilidad(float *tiempos, int *recursos, int *demandas, float t
 
     if (tiempoTotal <= tiempoDisponible && recursosTotales <= recursosDisponibles)
     {
-        printf("\nSÍ se puede cumplir la demanda con los recursos y tiempo disponibles.\n");
+        printf("\nSI se puede cumplir la demanda con los recursos y tiempo disponibles.\n");
     }
     else
     {
@@ -204,7 +204,7 @@ void editarProducto(char nombres[5][30], float *tiempos, int *recursos, int *dem
         }
     }
 
-    if (!encontrado)
+    if (encontrado == 0)
         printf("ERROR. Producto no encontrado.\n");
 }
 
@@ -234,6 +234,6 @@ void eliminarProducto(char nombres[5][30], float *tiempos, int *recursos, int *d
         }
     }
 
-    if (!encontrado)
+    if (encontrado == 0)
         printf("ERROR. Producto no encontrado.\n");
 }
